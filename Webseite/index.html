@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathe</title>
+
+    <!-- Style link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+
+    <!-- Script link -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Taschenrechner Funktionen</h1>
+        <div>
+            <img src="img/taunt.png" alt="taunt" loading="lazy">
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+
+            <div class="image-text-wrapper">
+                <img src="img/geoAnzeigeNicht.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)" loading="lazy">
+                <div class="text">
+                    <h2>Funktion 1 | Anzeige des Graphen</h2>
+                    <p>
+                        Sollte eine Funktion im Graphen nicht angezeigt werden und es keine Fehlermeldung geben, liegt es
+                        möglicherweise daran, dass der <span style="color: #00ff00; font-weight: 600;"> grüne Kreis</span>
+                        neben der Funktion nicht aktiviert wurde. Klicken Sie auf diesen Kreis, um die Funktion im Graphen
+                        sichtbar zu machen.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper reverse">
+                <div class="text">
+                    <h2>Funktion 2 | Verfärbung des Graphen</h2>
+                    <p>
+                        Sobald der Graph sichtbar ist, besteht die Möglichkeit, seine Farbe anzupassen, um einzelne Graphen
+                        besser zu unterscheiden. Auch die Linienbreite und der Linientyp, wie gestrichelt oder gepunktet, können
+                        bei Bedarf geändert werden.
+                    </p>
+                </div>
+                <img src="img/geoAnzeigeDa.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)" loading="lazy">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="img/geoNullstelle.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)" loading="lazy">
+                <div class="text">
+                    <h2>Funktion 3 | Nullstellen</h2>
+                    <p>
+                        Um eine Nullstelle zu ermitteln, geben Sie einfach den Begriff 'Nullstelle' in das Eingabefeld ein.
+                        Meistens wird diese Option direkt vorgeschlagen. Drücken Sie 'Enter', um ein neues Feld zu öffnen. Wählen
+                        Sie die Option 'Nullstelle (Polynom)' aus. Zwischen den Klammern () geben Sie den Namen Ihrer Funktion ein
+                        und bestätigen mit 'Enter'. Ihre Nullstellen werden daraufhin angezeigt, beispielsweise für den
+                        <span style="color: pink; font-weight: 600;">pinken Graphen</span>: x<sub>1</sub> = −2,56 und x<sub>2</sub> = 1,56.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper reverse">
+                <div class="text">
+                    <h2>Funktion 4 | Schnittpunkte</h2>
+                    <p>
+                        Um den Schnittpunkt oder die Schnittpunkte zu ermitteln, bietet GeoGebra die Methode 'Schnittpunkt' an.
+                        Wenn Sie darauf klicken, öffnet sich ein weiteres Fenster. Wählen Sie die Option 'Schnittpunkt (Objekt, Objekt)'
+                        aus. Um die Schnittpunkte berechnen zu lassen, müssen Sie die Namen der Funktionen eingeben. Anschließend werden
+                        die Schnittpunkte angezeigt.
+                    </p>
+                </div>
+                <img src="img/geoSchnittpunkt.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)" loading="lazy">
+            </div>
+
+            <div class="image-text-wrapper">
+                <img src="img/geoLösung.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)" loading="lazy">
+                <div class="text">
+                    <h2>Funktion 5 | Gleichungslösung</h2>
+                    <p>
+                        Um eine Gleichung zu lösen, geben Sie einfach 'löse' in das Eingabefeld ein, das Ihnen direkt vorgeschlagen wird.
+                        Klicken Sie darauf, um ein neues Fenster zu öffnen. Wählen Sie dann 'Löse(Gleichung)' aus. Ersetzen Sie das
+                        Platzhalterwort 'Gleichung' durch den Namen der Funktion, die Sie lösen möchten.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-text-wrapper reverse">
+                <div class="text">
+                    <h2>Typische Fehler</h2>
+                    <p>
+                        <strong>Falsche Eingaben:</strong> Tippfehler oder falsche Syntax im Eingabefeld. Wie <span style="color: red;">ein Komma,</span> anstatt von einem
+                        <span style="color: #00ff00;">Punkt.</span>
+                        <br><br>
+                        <strong>Unbenannte Objekte:</strong> Fehlende Namen für Objekte machen sie schwer identifizierbar.
+                        <br><br>
+                        <strong>Falsche Werkzeugwahl:</strong> Unpassende Werkzeuge für die Aufgabe verwenden.
+                    </p>
+                </div>
+                <img src="img/smiley.png" alt="Beschreibung des Bildes" loading="lazy">
+            </div>
+
+            <div class="image-text-wrapper">
+                <h1>Viel Spaß</h1>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+        <span class="closebtn" onclick="closeOverlay()">&times;</span>
+        <img id="overlay-image" class="overlay-image" src="" alt="Vollbild">
+    </div>
+
+</body>
+
+</html>
