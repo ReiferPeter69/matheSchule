@@ -19,14 +19,6 @@ function openOverlay(img) {
       overlay.style.display = 'none';
     }, 500); // Die Zeit muss mit der CSS-Transition übereinstimmen
   }
-  
-
-
-
-
-
-
-
 
 
   function nextSlide(button) {

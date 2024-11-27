@@ -259,3 +259,12 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.rainbow-text {
+  font-size: 18px;  /* Smaller font size */
+  font-weight: bold;
+  background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;  /* Makes the text transparent so the background shows through */
+}
