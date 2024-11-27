@@ -20,3 +20,45 @@ function openOverlay(img) {
     }, 500); // Die Zeit muss mit der CSS-Transition übereinstimmen
   }
   
+
+
+
+
+
+
+
+
+
+  function nextSlide(button) {
+    const slider = button.closest('.slider');
+    const slides = slider.querySelector('.slides');
+    const indicator = slider.querySelector('.slide-indicator');
+    const totalSlides = slider.querySelectorAll('.slide').length;
+
+    let currentIndex = parseInt(slides.dataset.currentIndex || 0);
+
+    if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        slides.dataset.currentIndex = currentIndex;
+    }
+
+    indicator.textContent = `${currentIndex + 1} / ${totalSlides}`;
+}
+
+function prevSlide(button) {
+    const slider = button.closest('.slider');
+    const slides = slider.querySelector('.slides');
+    const indicator = slider.querySelector('.slide-indicator');
+    const totalSlides = slider.querySelectorAll('.slide').length;
+
+    let currentIndex = parseInt(slides.dataset.currentIndex || 0);
+
+    if (currentIndex > 0) {
+        currentIndex--;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        slides.dataset.currentIndex = currentIndex;
+    }
+
+    indicator.textContent = `${currentIndex + 1} / ${totalSlides}`;
+}

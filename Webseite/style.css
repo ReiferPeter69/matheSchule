@@ -214,3 +214,48 @@ h1 {
     text-align: left;
   }
 }
+
+
+
+
+
+
+
+
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.slide-indicator {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
