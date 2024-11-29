@@ -268,3 +268,95 @@ h1 {
   background-clip: text;
   color: transparent;  /* Makes the text transparent so the background shows through */
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay Style */
+#overlayRules {
+  position: fixed; /* Overlay bleibt auf dem Bildschirm */
+  top: 70px; /* Startet 70px von oben */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px); /* Höhe des Overlays nimmt den Rest des Bildschirms abzüglich 70px ein */
+  background-color: rgba(0, 0, 0, 0.7); /* Halbdurchsichtiger Hintergrund */
+  display: none; /* Overlay ist standardmäßig nicht sichtbar */
+  opacity: 0;
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: flex-start; /* Vertikale Zentrierung ab 70px, flex-start sorgt dafür, dass der Inhalt oben beginnt */
+  z-index: 1000; /* Overlay wird über anderem Inhalt angezeigt */
+  overflow: auto; /* Aktiviert das Scrollen, wenn der Inhalt zu groß ist */
+  transition: opacity 0.5s ease; /* Fade-In/Out-Effekt */
+  display: flex; /* Flexbox, um den Inhalt zu zentrieren */
+}
+
+/* Container innerhalb des Overlays */
+.container {
+  
+  width: 100%; /* Breite auf 90% des Overlays setzen, damit es auch bei kleinen Bildschirmgrößen Platz hat */
+  margin: 0 auto; /* Automatische horizontale Ausrichtung */
+  padding: 20px;
+  background-color:  rgba(173, 216, 230, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  color: #333; /* Textfarbe */
+  overflow-y: auto; /* Vertikales Scrollen aktivieren, wenn der Inhalt zu groß ist */
+  height: calc(108% - 70px); /* Maximale Höhe des Containers soll den restlichen Platz einnehmen */
+}
+
+/* Styling für die einzelnen Operatoren */
+.operator {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9); /* Leicht transparenter Hintergrund für die Operatoren */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Operator Überschrift */
+.operator h2 {
+  color: #007bff; /* Blaue Farbe für Überschriften */
+}
+
+/* Operator Text */
+.operator p {
+  color: #333; /* Dunkelgraue Farbe für den Text */
+  line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+}
+
+.operator:nth-child(even) {
+  background-color: #e9f7ff;
+}
+
+.operator:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Responsives Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .operator {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .operator h2 {
+    font-size: 18px;
+  }
+
+  .operator p {
+    font-size: 14px;
+  }
+}
