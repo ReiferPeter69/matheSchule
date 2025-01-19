@@ -11,22 +11,32 @@
 
 :root {
   /* Grundfarben */
-  --background-color: #2e2e2e; /* Dunkleres Grau für den Hintergrund des Bodys */
-  --text-color: #f0f0f0; /* Helles Grau für den Haupttext */
-  --heading-color: #ffffff; /* Weiß für die Überschriften */
+  --background-color: #2e2e2e;
+  /* Dunkleres Grau für den Hintergrund des Bodys */
+  --text-color: #f0f0f0;
+  /* Helles Grau für den Haupttext */
+  --heading-color: #ffffff;
+  /* Weiß für die Überschriften */
 
   /* Akzentfarben */
-  --primary-color: #1c7ed6; /* Dunkleres Blau für Links und Buttons */
-  --secondary-color: #238636; /* Dunkleres Grün für positive Aktionen */
-  --warning-color: #d97706; /* Etwas dunkleres Orange für Hinweise oder Warnungen */
+  --primary-color: #1c7ed6;
+  /* Dunkleres Blau für Links und Buttons */
+  --secondary-color: #238636;
+  /* Dunkleres Grün für positive Aktionen */
+  --warning-color: #d97706;
+  /* Etwas dunkleres Orange für Hinweise oder Warnungen */
 
   /* Hintergrundfarben für Abschnitte */
-  --section-bg-color-light: #4a4a4a; /* Mittleres Grau für abwechselnde Abschnitte */
-  --section-bg-color-dark: #383838; /* Dunkleres Grau für abwechselnde Abschnitte */
+  --section-bg-color-light: #4a4a4a;
+  /* Mittleres Grau für abwechselnde Abschnitte */
+  --section-bg-color-dark: #383838;
+  /* Dunkleres Grau für abwechselnde Abschnitte */
 
   /* Glass-Effekte */
-  --glass-bg: rgba(255, 255, 255, 0.2); /* Glasartiger Hintergrund */
-  --glass-border: rgba(255, 255, 255, 0.3); /* Glasartiger Rand */
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  /* Glasartiger Hintergrund */
+  --glass-border: rgba(255, 255, 255, 0.3);
+  /* Glasartiger Rand */
 }
 
 body {
@@ -35,7 +45,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--heading-color);
 }
 
@@ -77,14 +89,22 @@ button:hover {
 }
 
 header {
-  background: var(--glass-bg); /* Glasartiger Hintergrund */
-  border: 1px solid var(--glass-border); /* Glasartiger Rand */
-  border-radius: 10px; /* Abgerundete Ecken für einen sanften Look */
-  backdrop-filter: blur(10px); /* Unscharfer Hintergrund für den Glass-Effekt */
-  padding: 10px; /* Innenabstand für bessere Lesbarkeit */
-  position: sticky; /* Sticky Header, bleibt immer am Bildschirmanker */
-  top: 0; /* Positionierung am oberen Rand des Bildschirms */
-  z-index: 10; /* Höherer Z-Index, damit der Header über andere Elemente sichtbar ist */
+  background: rgba(109, 109, 109, 0.584);
+  /* Glasartiger Hintergrund */
+  border: 1px solid var(--glass-border);
+  /* Glasartiger Rand */
+  border-radius: 10px;
+  /* Abgerundete Ecken für einen sanften Look */
+  backdrop-filter: blur(10px);
+  /* Unscharfer Hintergrund für den Glass-Effekt */
+  padding: 10px;
+  /* Innenabstand für bessere Lesbarkeit */
+  position: sticky;
+  /* Sticky Header, bleibt immer am Bildschirmanker */
+  top: 0;
+  /* Positionierung am oberen Rand des Bildschirms */
+  z-index: 10;
+  /* Höherer Z-Index, damit der Header über andere Elemente sichtbar ist */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +118,8 @@ header img {
 }
 
 p {
-  font-size: 1.2rem; /* Größe des Untertitels */
+  font-size: 1.2rem;
+  /* Größe des Untertitels */
   color: var(--text-color);
   margin-top: 10px;
 }
@@ -119,19 +140,23 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund für das Overlay */
-  display: none; /* Standardmäßig ausgeblendet */
+  background: rgba(0, 0, 0, 0.8);
+  /* Dunkler Hintergrund für das Overlay */
+  display: none;
+  /* Standardmäßig ausgeblendet */
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s ease;
-  z-index: 1000; /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
+  z-index: 1000;
+  /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
 }
 
 .overlay-image {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  animation: fadeIn 0.5s; /* Fade-In-Animation für das Bild */
+  animation: fadeIn 0.5s;
+  /* Fade-In-Animation für das Bild */
 }
 
 .closebtn {
@@ -145,28 +170,33 @@ main {
 }
 
 .closebtn:hover {
-  color: #f00; /* Farbe ändern, wenn Hover */
+  color: #f00;
+  /* Farbe ändern, wenn Hover */
 }
 
 /* Standard Layout: Bilder und Texte nebeneinander */
 .image-text-wrapper {
   display: flex;
-  flex-direction: row; /* Standard: Bilder und Texte nebeneinander */
+  flex-direction: row;
+  /* Standard: Bilder und Texte nebeneinander */
   align-items: flex-start;
   margin-bottom: 20px;
   padding: 20px;
-  background: var(--section-bg-color-light); /* Hintergrundfarbe für den Abschnitt */
+  background: var(--section-bg-color-light);
+  /* Hintergrundfarbe für den Abschnitt */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  flex-wrap: wrap; /* Verhindert das Erstellen von sehr kleinen Boxen */
+  flex-wrap: wrap;
+  /* Verhindert das Erstellen von sehr kleinen Boxen */
 }
 
 .image-text-wrapper img {
   max-width: 50%;
   height: auto;
   border-radius: 10px;
-  flex: 1 1 50%; /* Bild nimmt 50% des Containers ein */
+  flex: 1 1 50%;
+  /* Bild nimmt 50% des Containers ein */
 }
 
 .image-text-wrapper .text {
@@ -175,7 +205,8 @@ main {
   box-sizing: border-box;
   overflow: hidden;
   word-wrap: break-word;
-  min-width: 300px; /* Stellt sicher, dass der Textbereich nicht zu klein wird */
+  min-width: 300px;
+  /* Stellt sicher, dass der Textbereich nicht zu klein wird */
 }
 
 .image-text-wrapper.reverse {
@@ -199,18 +230,22 @@ h1 {
   h1 {
     font-size: 20px;
   }
+
   .image-text-wrapper {
-    flex-direction: column; /* Bei kleinerer Breite: Bilder und Texte untereinander */
+    flex-direction: column;
+    /* Bei kleinerer Breite: Bilder und Texte untereinander */
     text-align: center;
   }
 
   .image-text-wrapper img {
-    max-width: 100%; /* Bild auf volle Breite */
+    max-width: 100%;
+    /* Bild auf volle Breite */
   }
 
   .image-text-wrapper .text {
     max-width: 100%;
-    min-width: 100%; /* Text auf volle Breite */
+    min-width: 100%;
+    /* Text auf volle Breite */
     text-align: left;
   }
 }
@@ -261,12 +296,15 @@ h1 {
 }
 
 .rainbow-text {
-  font-size: 18px;  /* Smaller font size */
+  font-size: 18px;
+  /* Smaller font size */
   font-weight: bold;
   background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text; /* For Safari */
+  -webkit-background-clip: text;
+  /* For Safari */
   background-clip: text;
-  color: transparent;  /* Makes the text transparent so the background shows through */
+  color: transparent;
+  /* Makes the text transparent so the background shows through */
 }
 
 
@@ -281,34 +319,51 @@ h1 {
 
 /* Overlay Style */
 #overlayRules {
-  position: fixed; /* Overlay bleibt auf dem Bildschirm */
-  top: 70px; /* Startet 70px von oben */
+  position: fixed;
+  /* Overlay bleibt auf dem Bildschirm */
+  top: 70px;
+  /* Startet 70px von oben */
   left: 0;
   width: 100%;
-  height: calc(100% - 70px); /* Höhe des Overlays nimmt den Rest des Bildschirms abzüglich 70px ein */
-  background-color: rgba(0, 0, 0, 0.7); /* Halbdurchsichtiger Hintergrund */
-  display: none; /* Overlay ist standardmäßig nicht sichtbar */
+  height: calc(100% - 70px);
+  /* Höhe des Overlays nimmt den Rest des Bildschirms abzüglich 70px ein */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Halbdurchsichtiger Hintergrund */
+  display: none;
+  /* Overlay ist standardmäßig nicht sichtbar */
   opacity: 0;
-  justify-content: center; /* Horizontale Zentrierung */
-  align-items: flex-start; /* Vertikale Zentrierung ab 70px, flex-start sorgt dafür, dass der Inhalt oben beginnt */
-  z-index: 1000; /* Overlay wird über anderem Inhalt angezeigt */
-  overflow: auto; /* Aktiviert das Scrollen, wenn der Inhalt zu groß ist */
-  transition: opacity 0.5s ease; /* Fade-In/Out-Effekt */
-  display: flex; /* Flexbox, um den Inhalt zu zentrieren */
+  justify-content: center;
+  /* Horizontale Zentrierung */
+  align-items: flex-start;
+  /* Vertikale Zentrierung ab 70px, flex-start sorgt dafür, dass der Inhalt oben beginnt */
+  z-index: 1000;
+  /* Overlay wird über anderem Inhalt angezeigt */
+  overflow: auto;
+  /* Aktiviert das Scrollen, wenn der Inhalt zu groß ist */
+  transition: opacity 0.5s ease;
+  /* Fade-In/Out-Effekt */
+  display: flex;
+  /* Flexbox, um den Inhalt zu zentrieren */
 }
 
 /* Container innerhalb des Overlays */
 .container {
-  
-  width: 100%; /* Breite auf 90% des Overlays setzen, damit es auch bei kleinen Bildschirmgrößen Platz hat */
-  margin: 0 auto; /* Automatische horizontale Ausrichtung */
+
+  width: 100%;
+  /* Breite auf 90% des Overlays setzen, damit es auch bei kleinen Bildschirmgrößen Platz hat */
+  margin: 0 auto;
+  /* Automatische horizontale Ausrichtung */
   padding: 20px;
-  background-color:  rgba(173, 216, 230, 0.8);
+  background-color: rgba(173, 216, 230, 0.8);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
-  color: #333; /* Textfarbe */
-  overflow-y: auto; /* Vertikales Scrollen aktivieren, wenn der Inhalt zu groß ist */
-  height: calc(108% - 70px); /* Maximale Höhe des Containers soll den restlichen Platz einnehmen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Leichter Schatten */
+  color: #333;
+  /* Textfarbe */
+  overflow-y: auto;
+  /* Vertikales Scrollen aktivieren, wenn der Inhalt zu groß ist */
+  height: calc(108% - 70px);
+  /* Maximale Höhe des Containers soll den restlichen Platz einnehmen */
 }
 
 /* Styling für die einzelnen Operatoren */
@@ -316,19 +371,23 @@ h1 {
   margin: 15px 0;
   padding: 15px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.9); /* Leicht transparenter Hintergrund für die Operatoren */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Leicht transparenter Hintergrund für die Operatoren */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Operator Überschrift */
 .operator h2 {
-  color: #007bff; /* Blaue Farbe für Überschriften */
+  color: #007bff;
+  /* Blaue Farbe für Überschriften */
 }
 
 /* Operator Text */
 .operator p {
-  color: #333; /* Dunkelgraue Farbe für den Text */
-  line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+  color: #333;
+  /* Dunkelgraue Farbe für den Text */
+  line-height: 1.6;
+  /* Zeilenhöhe für bessere Lesbarkeit */
 }
 
 .operator:nth-child(even) {
@@ -358,5 +417,11 @@ h1 {
 
   .operator p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  h1 {
+    font-size: 18px;
   }
 }
