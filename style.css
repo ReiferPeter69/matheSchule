@@ -251,14 +251,6 @@ h1 {
   }
 }
 
-
-
-
-
-
-
-
-
 .slider {
   width: 100%;
   overflow: hidden;
@@ -300,23 +292,22 @@ h1 {
   font-size: 18px;
   /* Smaller font size */
   font-weight: bold;
-  background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
   -webkit-background-clip: text;
   /* For Safari */
   background-clip: text;
   color: transparent;
   /* Makes the text transparent so the background shows through */
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Overlay Style */
 #overlayRules {
@@ -349,7 +340,6 @@ h1 {
 
 /* Container innerhalb des Overlays */
 .container {
-
   width: 100%;
   /* Breite auf 90% des Overlays setzen, damit es auch bei kleinen Bildschirmgrößen Platz hat */
   margin: 0 auto;
@@ -368,29 +358,26 @@ h1 {
 }
 
 /* Styling für die einzelnen Operatoren */
- .operator {
+.operator {
   margin: 15px 0;
   padding: 15px;
   border-radius: 8px;
   /* Leicht transparenter Hintergrund für die Operatoren */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} 
+}
 
 /* Operator Überschrift */
- .operator h2 {
+.operator h2 {
   color: #007bff;
   /* Blaue Farbe für Überschriften */
 }
 
 /* Operator Text */
 .operator p {
-
   /* Dunkelgraue Farbe für den Text */
   line-height: 1.6;
   /* Zeilenhöhe für bessere Lesbarkeit */
-} 
-
-
+}
 
 /* Responsives Design für kleinere Bildschirme */
 @media (max-width: 768px) {
@@ -420,21 +407,8 @@ h1 {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playwrite+CU:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playwrite+CU:wght@100..400&display=swap");
 
 :root {
   --background-color: #1a1a1a;
@@ -456,7 +430,7 @@ h1 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 body {
@@ -485,7 +459,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Playwrite CU', cursive;
+  font-family: "Playwrite CU", cursive;
   font-size: 2rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -500,7 +474,8 @@ header img {
   border-radius: 12px;
   padding: 8px;
   background: rgba(255, 255, 255, 0.1);
-  transition: transform var(--transition-default), background var(--transition-default);
+  transition: transform var(--transition-default),
+    background var(--transition-default);
 }
 
 header img:hover {
@@ -539,7 +514,8 @@ header img:hover {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  transition: transform var(--transition-default), box-shadow var(--transition-default);
+  transition: transform var(--transition-default),
+    box-shadow var(--transition-default);
 }
 
 .image-text-wrapper:hover {
@@ -552,7 +528,8 @@ header img:hover {
   flex: 1;
   max-width: 40%;
   object-fit: cover;
-  transition: transform var(--transition-default), border-color var(--transition-default);
+  transition: transform var(--transition-default),
+    border-color var(--transition-default);
   border: 2px solid var(--glass-border);
 }
 
@@ -582,7 +559,8 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: background var(--transition-default), transform var(--transition-default);
+  transition: background var(--transition-default),
+    transform var(--transition-default);
 }
 
 button:hover {
@@ -641,7 +619,6 @@ button:hover {
   }
 }
 
-
 /* Operators Overlay */
 #overlayRules {
   display: flex;
@@ -677,7 +654,8 @@ button:hover {
   border-radius: 8px;
   margin: 1.5rem 0;
   padding: 1.5rem;
-  transition: background var(--transition-default), transform var(--transition-default), box-shadow var(--transition-default);
+  transition: background var(--transition-default),
+    transform var(--transition-default), box-shadow var(--transition-default);
 }
 
 .operator:hover {
@@ -715,26 +693,38 @@ button:hover {
     padding: 1rem;
     border-radius: 0;
   }
-  
+
   header h1 {
     font-size: 1.5rem;
   }
-  
+
   .image-text-wrapper {
     flex-direction: column;
     margin: 0.5rem;
     padding: 1rem;
   }
-  
+
   .image-text-wrapper img {
     max-width: 100%;
     margin-bottom: 1rem;
   }
-  
+
   #overlayRules .container {
     margin: 1rem;
     padding: 1rem;
   }
+}
+
+@media (max-width: 412px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+
 }
 
 /* Zusätzliche Animationen für sanfte Einblendungen */
@@ -743,23 +733,26 @@ button:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 
 .smiley {
   border: none !important;
-  animation: wackeln 1s infinite ;
+  animation: wackeln 1s infinite;
 }
 
 @keyframes wackeln {
-  from { 
+  from {
     transform: rotate(1deg);
   }
-  to { transform: rotate(0deg);}
-
-  
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 /* Scrollbar für alle Elemente ausblenden */
