@@ -1,1151 +1,1014 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mathe</title>
 
-    <!-- Style link -->
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathe</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/icon.png" type="image/x-icon" />
+  <!-- Style link -->
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Tracking -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="58267c01-482f-491c-8458-2880055b6caf"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="img/icon.png" type="image/x-icon" />
 
-    <!-- Script link -->
-    <script src="script.js" defer></script>
-  </head>
+  <!-- Tracking -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="58267c01-482f-491c-8458-2880055b6caf"></script>
+
+  <!-- Script link -->
+  <script src="script.js" defer></script>
+</head>
 
 
 
-  <body>
-    <header>
-      <h1>Taschenrechner Funktionen</h1>
-      <div>
-        <img src="img/taunt.png" alt="taunt" loading="lazy" onclick="overlayRules()"/>
-      </div>
-    </header>
+<body>
+  <header>
+    <h1>Taschenrechner Funktionen</h1>
+    <div>
+      <img src="img/taunt.png" alt="taunt" loading="lazy" onclick="overlayRules()" />
+    </div>
+  </header>
 
-    <main>
-      <section class="content">
-        <main>
-          <section class="content">
-            <!-- Funktion 1 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoStart.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 1 | Anzeige des Graphen</h2>
-                      <p>
-                        Sollte eine Funktion im Graphen nicht angezeigt werden
-                        und es keine Fehlermeldung geben, liegt es
-                        möglicherweise daran, dass der
-                        <span style="color: #00ff00; font-weight: 600">
-                          grüne Kreis</span
-                        >
-                        neben der Funktion nicht aktiviert wurde. Klicken Sie
-                        auf diesen Kreis, um die Funktion im Graphen sichtbar zu
-                        machen.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 1 | Graphenansicht anpassen</h2>
-                      <p>
-                        Um die Farbe des Graphen anzupassen, klicken Sie auf die
-                        drei Punkte neben der gewünschten Funktion. Wählen Sie
-                        anschließend 'Einstellungen' aus. Dort können Sie die
-                        Farbe und weitere Darstellungsoptionen, wie Linienstil
-                        oder Dicke, individuell anpassen.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoStart2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoStart3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 1 | Graphen Einstellungen</h2>
-                      <p>
-                        In den Einstellungen können Sie die Dicke, Farbe und
-                        andere Eigenschaften des Graphen nach Belieben anpassen,
-                        um das
-                        <span class="rainbow-text">gewünschte Aussehen </span>
-                        zu erzielen.
-                      </p>
-                    </div>
+  <main>
+    <section class="content">
+      <main>
+        <section class="content">
+          <!-- Funktion 1 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoStart.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 1 | Anzeige des Graphen</h2>
+                    <p>
+                      Sollte eine Funktion im Graphen nicht angezeigt werden
+                      und es keine Fehlermeldung geben, liegt es
+                      möglicherweise daran, dass der
+                      <span style="color: #00ff00; font-weight: 600">
+                        grüne Kreis</span>
+                      neben der Funktion nicht aktiviert wurde. Klicken Sie
+                      auf diesen Kreis, um die Funktion im Graphen sichtbar zu
+                      machen.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-            <!-- Funktion 2 Slider -->
-            <div class="slider" data-rule="funktion2">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoSteigung.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 2 | Der Regler</h2>
-                      <p>
-                        Nachdem du einen Regler erstellt hast, kannst du ihn
-                        aktivieren, indem du rechts unten auf den Play-Button
-                        klickst. Möchtest du den Regler bearbeiten, gehe in die
-                        Einstellungen und klicke explizit auf "Schieberegler",
-                        um die Anpassungen vorzunehmen.
-                      </p>
-                    </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 1 | Graphenansicht anpassen</h2>
+                    <p>
+                      Um die Farbe des Graphen anzupassen, klicken Sie auf die
+                      drei Punkte neben der gewünschten Funktion. Wählen Sie
+                      anschließend 'Einstellungen' aus. Dort können Sie die
+                      Farbe und weitere Darstellungsoptionen, wie Linienstil
+                      oder Dicke, individuell anpassen.
+                    </p>
                   </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 2 | Regler aktivieren und bearbeiten</h2>
-                      <p>
-                        Nachdem du einen Regler erstellt hast, kannst du ihn
-                        aktivieren, indem du rechts unten auf den Play-Button
-                        klickst. Möchtest du den Regler bearbeiten, gehe in die
-                        Einstellungen und klicke explizit auf "Schieberegler",
-                        um die Anpassungen vorzunehmen.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoSteigung2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoSteigung3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 2 | Einstellungen anpassen</h2>
-                      <p>
-                        In den Einstellungen kannst du verschiedene Parameter
-                        wie die Schrittweite, den minimalen und maximalen Wert
-                        sowie die Geschwindigkeit des Reglers anpassen. So
-                        kannst du den Regler ganz nach deinen Bedürfnissen
-                        gestalten.
-                      </p>
-                    </div>
-                  </div>
+                  <img src="img/geoStart2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
                 </div>
               </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-            <!-- Funktion 3 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoNullstelle.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 3 | Nullstelle anzeigen</h2>
-                      <p>
-                        Wenn du die Nullstellen eines Polynoms anzeigen
-                        möchtest, gib einfach "Nullstelle(Polynom)" in das
-                        Eingabefeld ein und öffne die Funktion zur Berechnung.
-                      </p>
-                    </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoStart3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 1 | Graphen Einstellungen</h2>
+                    <p>
+                      In den Einstellungen können Sie die Dicke, Farbe und
+                      andere Eigenschaften des Graphen nach Belieben anpassen,
+                      um das
+                      <span class="rainbow-text">gewünschte Aussehen </span>
+                      zu erzielen.
+                    </p>
                   </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 3 | Nullstellenberechnung</h2>
-                      <p>
-                        Nun gib den Namen deiner Funktion (in diesem Fall f) in
-                        die Klammern der Funktion "Nullstelle" ein, um die
-                        Nullstellen deines Graphen anzuzeigen.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoNullstelle2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoNullstelle3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 3 | Erwartetes Ergebnis</h2>
-                      <p>
-                        Das Ergebnis zeigt dann eine Auflistung der Nullstellen,
-                        die der Funktion zugeordnet sind. Diese erscheinen als
-                        Werte auf der x-Achse, wo der Graph die Null schneidet.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-            <!-- Funktion 4 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoSchnittpunkt.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 4 | Anzeige des Graphen</h2>
-                      <p>
-                        In GeoGebra kannst du die Schnittpunkte von Funktionen
-                        einfach berechnen. Gib dazu Schnittpunkt(Object1,
-                        Object2) in die Eingabezeile ein.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 4 | Schnittpunkte finden</h2>
-                      <p>
-                        Gib in GeoGebra Schnittpunkt(f, g) ein, um den
-                        Schnittpunkt der Funktionen f und g zu finden.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoSchnittpunkt2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoSchnittpunkt3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 4 | Schnittpunkte anzeigen</h2>
-                      <p>
-                        Nachdem du Schnittpunkt(f, g) eingegeben hast, drücke
-                        Enter. Alle Schnittpunkte der Funktionen f und g werden
-                        dann angezeigt
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
               </div>
             </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+          <!-- Funktion 2 Slider -->
+          <div class="slider" data-rule="funktion2">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoSteigung.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 2 | Der Regler</h2>
+                    <p>
+                      Nachdem du einen Regler erstellt hast, kannst du ihn
+                      aktivieren, indem du rechts unten auf den Play-Button
+                      klickst. Möchtest du den Regler bearbeiten, gehe in die
+                      Einstellungen und klicke explizit auf "Schieberegler",
+                      um die Anpassungen vorzunehmen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 2 | Regler aktivieren und bearbeiten</h2>
+                    <p>
+                      Nachdem du einen Regler erstellt hast, kannst du ihn
+                      aktivieren, indem du rechts unten auf den Play-Button
+                      klickst. Möchtest du den Regler bearbeiten, gehe in die
+                      Einstellungen und klicke explizit auf "Schieberegler",
+                      um die Anpassungen vorzunehmen.
+                    </p>
+                  </div>
+                  <img src="img/geoSteigung2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoSteigung3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 2 | Einstellungen anpassen</h2>
+                    <p>
+                      In den Einstellungen kannst du verschiedene Parameter
+                      wie die Schrittweite, den minimalen und maximalen Wert
+                      sowie die Geschwindigkeit des Reglers anpassen. So
+                      kannst du den Regler ganz nach deinen Bedürfnissen
+                      gestalten.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+          <!-- Funktion 3 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoNullstelle.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 3 | Nullstelle anzeigen</h2>
+                    <p>
+                      Wenn du die Nullstellen eines Polynoms anzeigen
+                      möchtest, gib einfach "Nullstelle(Polynom)" in das
+                      Eingabefeld ein und öffne die Funktion zur Berechnung.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 3 | Nullstellenberechnung</h2>
+                    <p>
+                      Nun gib den Namen deiner Funktion (in diesem Fall f) in
+                      die Klammern der Funktion "Nullstelle" ein, um die
+                      Nullstellen deines Graphen anzuzeigen.
+                    </p>
+                  </div>
+                  <img src="img/geoNullstelle2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoNullstelle3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 3 | Erwartetes Ergebnis</h2>
+                    <p>
+                      Das Ergebnis zeigt dann eine Auflistung der Nullstellen,
+                      die der Funktion zugeordnet sind. Diese erscheinen als
+                      Werte auf der x-Achse, wo der Graph die Null schneidet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+          <!-- Funktion 4 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoSchnittpunkt.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 4 | Anzeige des Graphen</h2>
+                    <p>
+                      In GeoGebra kannst du die Schnittpunkte von Funktionen
+                      einfach berechnen. Gib dazu Schnittpunkt(Object1,
+                      Object2) in die Eingabezeile ein.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 4 | Schnittpunkte finden</h2>
+                    <p>
+                      Gib in GeoGebra Schnittpunkt(f, g) ein, um den
+                      Schnittpunkt der Funktionen f und g zu finden.
+                    </p>
+                  </div>
+                  <img src="img/geoSchnittpunkt2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoSchnittpunkt3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 4 | Schnittpunkte anzeigen</h2>
+                    <p>
+                      Nachdem du Schnittpunkt(f, g) eingegeben hast, drücke
+                      Enter. Alle Schnittpunkte der Funktionen f und g werden
+                      dann angezeigt
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
 
           <!-- Funktion 5 Slider -->
-<div class="slider" data-rule="funktion1">
-  <div class="slides" data-current-index="0">
-    <!-- Slide 1 -->
-    <div class="slide">
-      <div class="image-text-wrapper">
-        <img
-          src="img/geoLöse.jpeg"
-          alt="Beschreibung des Bildes"
-          onclick="openOverlay(this)"
-          loading="lazy"
-        />
-        <div class="text">
-          <h2>Funktion 5 | Einfache Lösung für Funktionen</h2>
-          <p>
-            Mit GeoGebra kannst du Funktionen wie „schwierig(x)“ lösen, selbst wenn sie komplex erscheinen.
-            Gib einfach Lösen(Gleichung) in die Eingabezeile ein, um alle Lösungen bequem angezeigt zu bekommen.
-            So löst du auch anspruchsvolle Aufgaben mühelos!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="slide">
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoLöse.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 5 | Einfache Lösung für Funktionen</h2>
+                    <p>
+                      Mit GeoGebra kannst du Funktionen wie „schwierig(x)“ lösen, selbst wenn sie komplex erscheinen.
+                      Gib einfach Lösen(Gleichung) in die Eingabezeile ein, um alle Lösungen bequem angezeigt zu
+                      bekommen.
+                      So löst du auch anspruchsvolle Aufgaben mühelos!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 5 | Ergebnis runden</h2>
+                    <p>
+                      Hast du deine Lösung erhalten, kannst du diese gerundet als Dezimalzahl darstellen lassen,
+                      indem du auf den lila Button neben der Lösung klickst.
+                    </p>
+                  </div>
+                  <img src="img/geoLöse2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoLöse3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 5 | Zurück zur Originalanzeige</h2>
+                    <p>
+                      Natürlich kannst du zur ursprünglichen Darstellung zurückkehren, indem du erneut auf den Button
+                      klickst.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Zusätzlicher Slide: Extra Bild -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 5 | Extra Funktionalitäten</h2>
+                    <p>
+                      Auch kompliziertere Rechenaufgaben, wie die folgenden, sind möglich. Falls eine Aufgabe nicht per
+                      Hand gelöst werden soll, kann man stattdessen den Taschenrechner verwenden, um sie schnell zu
+                      bearbeiten. Wichtig das man x, z oder y als Variabel verwendet.
+                    </p>
+                  </div>
+                  <img src="img/geoLöse4.jpg" alt="Zusätzliche Bildbeschreibung" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 4</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+          <!-- Funktion 6 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoPolynom.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 6 | Polynom vereinfachen</h2>
+                    <p>
+                      Falls Sie einen Graphen verschoben haben und diesen als
+                      neuen Graphen gespeichert haben, erhalten Sie
+                      möglicherweise einen langen Term in der Form eines
+                      Polynoms. Um diesen Ausdruck zu vereinfachen und besser
+                      lesbar zu machen, können Sie die Funktion Polynom im
+                      Eingabefeld verwenden. Diese Funktion wird den Term für
+                      Sie zusammenfassen und ihn in eine einfachere,
+                      kompaktere Form bringen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 6 | Polynom vereinfachen</h2>
+                    <p>
+                      Geben Sie den Namen der Funktion, die Sie vereinfacht
+                      haben möchten, in das Eingabefeld ein.
+                    </p>
+                  </div>
+                  <img src="img/geoPolynom2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoPolynom3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 6 | Vereinfachter Term</h2>
+                    <p>
+                      Jetzt haben Sie den vereinfachten Term vor sich, der den
+                      ursprünglichen Ausdruck in eine kompaktere und leichter
+                      verständliche Form umwandelt. Dies macht die weitere
+                      Bearbeitung und Analyse des Graphen wesentlich
+                      einfacher.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+          <!-- Funktion 7 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoFaktorisiere.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 7 | Funktion faktorisieren</h2>
+                    <p>
+                      Wenn Sie die Funktion faktorisieren möchten, geben Sie
+                      einfach den Namen der Funktion in das Eingabefeld ein.
+                      Dies ist besonders nützlich, wenn Sie den Satz vom
+                      Nullprodukt anwenden möchten, um die Nullstellen der
+                      Funktion zu ermitteln.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 7 | Funktion faktorisieren</h2>
+                    <p>
+                      Geben Sie den Namen der Funktion ein, die Sie faktorisieren möchten.
+                    </p>
+                  </div>
+                  <img src="img/geoFaktorisiere2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoFaktorisiere3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 7 | Faktorisierte Form</h2>
+                    <p>
+                      Hier ist nun die faktorisierte Form Ihrer Funktion. Damit können Sie die Nullstellen direkt
+                      ablesen
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+          <!-- Funktion 8 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoAbleitung.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 8 | Ableitung</h2>
+                    <p>
+                      Wenn Sie einen Graphen ableiten möchten,
+                      können Sie dafür die Ableitungsfunktion im
+                      Eingabefeld verwenden. Diese Funktion bietet
+                      mehrere Vorteile, wie zum Beispiel die Möglichkeit,
+                      Steigungen in jedem Punkt des Graphen zu bestimmen
+                      oder Extrempunkte sowie Wendepunkte zu analysieren.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 8 | Funktionen ableiten</h2>
+                    <p>
+                      Geben Sie den Namen der Funktion, die Sie ableiten
+                      möchten, in das Eingabefeld ein.
+                    </p>
+                  </div>
+                  <img src="img/geoAbleitung2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoAbleitung3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 8 | Abgeleitete Funktion</h2>
+                    <p>
+                      Der Ableitungsgraph wird nun angezeigt. Erkennbar ist er durch den oberen Strich über dem
+                      Funktionsnamen.
+                      <br>
+                      <strong>Funktion werden in der Klausur mit fs(x) als Ableitung einer Funktion markiert.</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 8 | Ableitungsregeln</h2>
+
+
+
+
+
+
+                    <div style="margin-bottom: 20px;">
+                      <h2 style="color: #0a9396;">1. Potenzregel</h2>
+                      <p>Für Funktionen der Form <code
+                          style="background-color: #777676; padding: 2px 4px; border-radius: 3px;">f(x) = xⁿ</code>
+                        gilt:</p>
+                      <p><em>f'(x) = n · x^(n-1)</em></p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                      <h2 style="color: #0a9396;">2. Summenregel</h2>
+                      <p>Die Ableitung der Summe mehrerer Funktionen entspricht der Summe der Ableitungen:</p>
+                      <p><em>f(x) = g(x) + h(x) &rarr; f'(x) = g'(x) + h'(x)</em></p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                      <h2 style="color: #0a9396;">3. Faktorregel</h2>
+                      <p>Ein konstanter Faktor kann aus der Ableitung herausgezogen werden:</p>
+                      <p><em>f(x) = c · g(x) &rarr; f'(x) = c · g'(x)</em></p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                      <h2 style="color: #0a9396;">4. Produktregel</h2>
+                      <p>Für das Produkt zweier Funktionen gilt:</p>
+                      <p><em>f(x) = g(x) · h(x) &rarr; f'(x) = g'(x) · h(x) + g(x) · h'(x)</em></p>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 4</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+          <!-- Funktion 9 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoTangente.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 9 | Funktion Tangente</h2>
+                    <p>
+                      Mit der Tangentenfunktion können Sie die Tangente an einen Graphen in einem Punkt bestimmen. Sie
+                      gibt die momentane Steigung an und hilft, lokale Veränderungen und das Verhalten der Funktion zu
+                      analysieren.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 9 | Funktion Tangente</h2>
+                    <p>
+                      Geben Sie die Funktion zusammen mit einem Punkt ein, an deren Graph Sie eine Tangente bestimmen
+                      möchten. Die Ableitung liefert die Steigung der Tangente im gewählten Punkt und hilft, das lokale
+                      Verhalten der Funktion zu analysieren.
+                    </p>
+                  </div>
+                  <img src="img/geoTangente2.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoTangente3.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 9 | Tangente und ihre Steigung</h2>
+                    <p>
+                      Hier ist die Gleichung der Tangente. Die Tangente gibt die momentane Steigung im gewählten Punkt
+                      an und hilft, das lokale Verhalten der Funktion zu analysieren.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+          <!-- Funktion 10 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoTrigometrie.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 10 | Funktion Trigometrie</h2>
+                    <p>
+                      Von den vielen trigonometrischen Funktionen sind für uns nur sin, cos und tan wichtig. Möchtest du
+                      den Winkel
+                      𝛼 berechnen, nutzt du arcsin, arccos oder arctan als Umkehrfunktionen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 10 | Winkel in Grad statt im Bogenmaß berechnen</h2>
+                    <p>
+                    <p style="color: red;">Wichtig:</p> Wenn du den Winkel in Grad statt im Bogenmaß erhalten möchtest,
+                    musst du nach deinem Befehl "d" (degree) hinzufügen. Andernfalls gibt der Taschenrechner das
+                    Ergebnis im Bogenmaß (radian) aus, was zu falschen Interpretationen führen kann.
+                    </p>
+                  </div>
+                  <img src="img/geoTrigometrie2.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoTrigometrie3.jpg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 10 | Hinweis</h2>
+                    <p>
+                      In GeoGebra wird die fertige Gradzahl, wie im folgenden Beispiel, nicht direkt angezeigt. Für eine
+                      bessere Nutzererfahrung empfiehlt es sich daher, den "CAX Rechner" zu verwenden, da dort auch das
+                      ausgewertete Ergebnis direkt sichtbar ist.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+          <!-- Funktion 11 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoWendestellen.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 11 | Funktion Wendepunkt</h2>
+                    <p>
+                      Mit der Wendepunktfunktion kann überprüft werden, an welcher Stelle sich der Graph wendet – also
+                      zum Beispiel von einer Linkskurve in eine Rechtskurve übergeht. An einem Wendepunkt liegt weder
+                      eine Links- noch eine Rechtskrümmung vor – der Graph ändert dort seine Krümmungsrichtung.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 11 | Funktion Wendepunkt</h2>
+                    <p>
+                      Um die Wendepunkt-Funktion im Taschenrechner zu nutzen, geben Sie einfach „wendepunkt“ in das
+                      Eingabefeld ein und bestätigen Sie die Eingabe.
+                    </p>
+                  </div>
+                  <img src="img/geoWendestellen2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoWendestellen3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 11 | Wendepunkt anzeigen lassen</h2>
+                    <p>
+                      Nachdem Sie Ihre Funktion eingegeben haben, zeigt der Taschenrechner den Wendepunkt bzw. die
+                      Wendepunkte als markierten Punkt im Graphen an.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+          <!-- Funktion 12 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoExtrema.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 12 | Funktion Extremum</h2>
+                    <p>
+                      Mit der Extremum-Funktion können Sie überprüfen, wo im Graphen Hoch- oder Tiefpunkte liegen – also
+                      Stellen, an denen der Graph seine Richtung ändert. An einem Extrempunkt ist der Graph weder
+                      steigend noch fallend.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 12 | Ergebnisanzeige</h2>
+                    <p>
+                      Um die Extremum-Funktion im Taschenrechner zu nutzen, geben Sie extremum in das Eingabefeld ein
+                      und bestätigen Sie die Eingabe.
+                    </p>
+                  </div>
+                  <img src="img/geoExtrema2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoExtrema3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 12 | Ergebnisanzeige</h2>
+                    <p>
+                      Wenn Sie dann Ihre Funktion in die Extremum-Funktion eingegeben haben, erhalten Sie einen Punkt,
+                      der das Extremum darstellt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+
+          <!-- Funktion 13 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoMaxMin.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 13 | Min und Max</h2>
+                    <p>
+                      Wenn Sie das Maximum oder Minimum einer Funktion berechnen möchten, geben Sie einfach den Befehl
+                      max() oder min() in das Eingabefeld ein.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 13 | Min und Max</h2>
+                    <p>
+                      Schreiben Sie den Namen der Funktion in die Klammern, deren Maximum oder Minimum Sie bestimmen
+                      möchten, zusammen mit dem Intervall auf den Sie die Funktion untersuchen möchten.
+                    </p>
+                  </div>
+                  <img src="img/geoMaxMin2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoMaxMin3.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 13 | Min und Max</h2>
+                    <p>
+                      Hier sehen Sie nun den größten bzw. kleinsten Wert der Funktion. Damit können Sie schnell das
+                      Verhalten der Funktion untersuchen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+
+          <!-- Funktion 14 Slider -->
+          <div class="slider" data-rule="funktion1">
+            <div class="slides" data-current-index="0">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="image-text-wrapper">
+                  <img src="img/geoSummenzeichen.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+                  <div class="text">
+                    <h2>Funktion 14 | Summenzeichen berechnen</h2>
+                    <p>
+                      Wenn Sie die Summe einer Folge oder eines Ausdrucks berechnen möchten, geben Sie einfach den
+                      Befehl Summe() in das Eingabefeld ein. Dies ist besonders nützlich für arithmetische Reihen oder
+                      komplexere Summenberechnungen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="image-text-wrapper reverse">
+                  <div class="text">
+                    <h2>Funktion 14 | Summe eingeben</h2>
+                    <p>
+                      Geben Sie die Summe mit den gewünschten Parametern ein: Summe(Ausdruck, Variable, Startindex,
+                      Endindex). Beispiel: Summe(i, i, 1, 10) berechnet die Summe von 1 bis 10.
+                    </p>
+                  </div>
+                  <img src="img/geoSummenzeichen2.jpeg" alt="Beschreibung des Bildes" onclick="openOverlay(this)"
+                    loading="lazy" />
+
+                </div>
+
+              </div>
+            </div>
+            <div class="controls">
+              <button onclick="prevSlide(this)">&#8592; Zurück</button>
+              <span class="slide-indicator">1 / 3</span>
+              <button onclick="nextSlide(this)">Vor &#8594;</button>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Weitere Slider für Funktionen -->
+        </section>
+      </main>
+
       <div class="image-text-wrapper reverse">
         <div class="text">
-          <h2>Funktion 5 | Ergebnis runden</h2>
+          <h2>Typische Fehler</h2>
           <p>
-            Hast du deine Lösung erhalten, kannst du diese gerundet als Dezimalzahl darstellen lassen,
-            indem du auf den lila Button neben der Lösung klickst.
+            <strong>Falsche Eingaben:</strong> Tippfehler oder falsche Syntax
+            im Eingabefeld. Wie
+            <span style="color: red">ein Komma,</span> anstatt von einem
+            <span style="color: #00ff00">Punkt.</span>
+            <br /><br />
+            <strong>Unbenannte Objekte:</strong> Fehlende Namen für Objekte
+            machen sie schwer identifizierbar. <br /><br />
+            <strong>Falsche Werkzeugwahl:</strong> Unpassende Werkzeuge für
+            die Aufgabe verwenden.
           </p>
+
         </div>
-        <img
-          src="img/geoLöse2.jpeg"
-          alt="Beschreibung des Bildes"
-          onclick="openOverlay(this)"
-          loading="lazy"
-        />
+        <img src="img/smiley.png" alt="Beschreibung des Bildes" loading="lazy" class="smiley" />
       </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="slide">
+
       <div class="image-text-wrapper">
-        <img
-          src="img/geoLöse3.jpeg"
-          alt="Beschreibung des Bildes"
-          onclick="openOverlay(this)"
-          loading="lazy"
-        />
-        <div class="text">
-          <h2>Funktion 5 | Zurück zur Originalanzeige</h2>
-          <p>
-            Natürlich kannst du zur ursprünglichen Darstellung zurückkehren, indem du erneut auf den Button klickst.
-          </p>
-        </div>
+        <h1>Viel Spaß</h1>
       </div>
-    </div>
-    <!-- Zusätzlicher Slide: Extra Bild -->
-    <div class="slide">
-      <div class="image-text-wrapper reverse">
-        <div class="text">
-          <h2>Funktion 5 | Extra Funktionalitäten</h2>
-          <p>
-            Auch kompliziertere Rechenaufgaben, wie die folgenden, sind möglich. Falls eine Aufgabe nicht per Hand gelöst werden soll, kann man stattdessen den Taschenrechner verwenden, um sie schnell zu bearbeiten. Wichtig das man x, z oder y als Variabel verwendet.
-          </p>
-        </div>
-        <img
-          src="img/geoLöse4.jpg"
-          alt="Zusätzliche Bildbeschreibung"
-          onclick="openOverlay(this)"
-          loading="lazy"
-        />
-      </div>
-    </div>
+    </section>
+  </main>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay">
+    <span class="closebtn" onclick="closeOverlay()">&times;</span>
+    <img id="overlay-image" class="overlay-image" src="" alt="Vollbild" />
   </div>
-  <div class="controls">
-    <button onclick="prevSlide(this)">&#8592; Zurück</button>
-    <span class="slide-indicator">1 / 4</span>
-    <button onclick="nextSlide(this)">Vor &#8594;</button>
-  </div>
-</div>
 
+  <!-- Secound Overlay for the Operators -->
+  <div id="overlayRules" class="overlayRules" style="display: none; opacity: 0;">
+    <div class="container">
+      <h1>Operatoren-Erklärungen</h1>
 
-
-            <!-- Funktion 6 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoPolynom.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 6 | Polynom vereinfachen</h2>
-                      <p>
-                        Falls Sie einen Graphen verschoben haben und diesen als
-                        neuen Graphen gespeichert haben, erhalten Sie
-                        möglicherweise einen langen Term in der Form eines
-                        Polynoms. Um diesen Ausdruck zu vereinfachen und besser
-                        lesbar zu machen, können Sie die Funktion Polynom im
-                        Eingabefeld verwenden. Diese Funktion wird den Term für
-                        Sie zusammenfassen und ihn in eine einfachere,
-                        kompaktere Form bringen.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 6 | Polynom vereinfachen</h2>
-                      <p>
-                        Geben Sie den Namen der Funktion, die Sie vereinfacht
-                        haben möchten, in das Eingabefeld ein.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoPolynom2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoPolynom3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 6 | Vereinfachter Term</h2>
-                      <p>
-                        Jetzt haben Sie den vereinfachten Term vor sich, der den
-                        ursprünglichen Ausdruck in eine kompaktere und leichter
-                        verständliche Form umwandelt. Dies macht die weitere
-                        Bearbeitung und Analyse des Graphen wesentlich
-                        einfacher.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-            <!-- Funktion 7 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoFaktorisiere.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 7 | Funktion faktorisieren</h2>
-                      <p>
-                        Wenn Sie die Funktion faktorisieren möchten, geben Sie
-                        einfach den Namen der Funktion in das Eingabefeld ein.
-                        Dies ist besonders nützlich, wenn Sie den Satz vom
-                        Nullprodukt anwenden möchten, um die Nullstellen der
-                        Funktion zu ermitteln.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 7 | Funktion faktorisieren</h2>
-                      <p>
-                        Geben Sie den Namen der Funktion ein, die Sie faktorisieren möchten.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoFaktorisiere2.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoFaktorisiere3.jpeg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 7 | Faktorisierte Form</h2>
-                      <p>
-                        Hier ist nun die faktorisierte Form Ihrer Funktion. Damit können Sie die Nullstellen direkt ablesen
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-
-
-                <!-- Funktion 8 Slider -->
-                <div class="slider" data-rule="funktion1">
-                  <div class="slides" data-current-index="0">
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoAbleitung.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 8 | Ableitung</h2>
-                          <p>
-                            Wenn Sie einen Graphen ableiten möchten, 
-                            können Sie dafür die Ableitungsfunktion im 
-                            Eingabefeld verwenden. Diese Funktion bietet
-                             mehrere Vorteile, wie zum Beispiel die Möglichkeit, 
-                             Steigungen in jedem Punkt des Graphen zu bestimmen 
-                             oder Extrempunkte sowie Wendepunkte zu analysieren.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper reverse">
-                        <div class="text">
-                          <h2>Funktion 8 | Funktionen ableiten</h2>
-                          <p>
-                            Geben Sie den Namen der Funktion, die Sie ableiten
-                             möchten, in das Eingabefeld ein.
-                          </p>
-                        </div>
-                        <img
-                          src="img/geoAbleitung2.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoAbleitung3.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 8 | Abgeleitete Funktion</h2>
-                          <p>
-                            Der Ableitungsgraph wird nun angezeigt. Erkennbar ist er durch den oberen Strich über dem Funktionsnamen.
-                            <br>
-                            <strong>Funktion werden in der Klausur mit fs(x) als Ableitung einer Funktion markiert.</strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper reverse">
-                        <div class="text">
-                          <h2>Funktion 8 | Ableitungsregeln</h2>
-
-
-                          
-
-
-
-                          <div style="margin-bottom: 20px;">
-                            <h2 style="color: #0a9396;">1. Potenzregel</h2>
-                            <p>Für Funktionen der Form <code style="background-color: #777676; padding: 2px 4px; border-radius: 3px;">f(x) = xⁿ</code> gilt:</p>
-                            <p><em>f'(x) = n · x^(n-1)</em></p>
-                          </div>
-                          
-                          <div style="margin-bottom: 20px;">
-                            <h2 style="color: #0a9396;">2. Summenregel</h2>
-                            <p>Die Ableitung der Summe mehrerer Funktionen entspricht der Summe der Ableitungen:</p>
-                            <p><em>f(x) = g(x) + h(x) &rarr; f'(x) = g'(x) + h'(x)</em></p>
-                          </div>
-                          
-                          <div style="margin-bottom: 20px;">
-                            <h2 style="color: #0a9396;">3. Faktorregel</h2>
-                            <p>Ein konstanter Faktor kann aus der Ableitung herausgezogen werden:</p>
-                            <p><em>f(x) = c · g(x) &rarr; f'(x) = c · g'(x)</em></p>
-                          </div>
-                          
-                          <div style="margin-bottom: 20px;">
-                            <h2 style="color: #0a9396;">4. Produktregel</h2>
-                            <p>Für das Produkt zweier Funktionen gilt:</p>
-                            <p><em>f(x) = g(x) · h(x) &rarr; f'(x) = g'(x) · h(x) + g(x) · h'(x)</em></p>
-                          </div>
-                          </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-                  <div class="controls">
-                    <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                    <span class="slide-indicator">1 / 4</span>
-                    <button onclick="nextSlide(this)">Vor &#8594;</button>
-                  </div>
-                </div>
-
-
-                 <!-- Funktion 9 Slider -->
-            <div class="slider" data-rule="funktion1">
-              <div class="slides" data-current-index="0">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoTangente.jpg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 9 | Funktion Tangente</h2>
-                      <p>
-                        Mit der Tangentenfunktion können Sie die Tangente an einen Graphen in einem Punkt bestimmen. Sie gibt die momentane Steigung an und hilft, lokale Veränderungen und das Verhalten der Funktion zu analysieren.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="image-text-wrapper reverse">
-                    <div class="text">
-                      <h2>Funktion 9 | Funktion Tangente</h2>
-                      <p>
-                        Geben Sie die Funktion zusammen mit einem Punkt ein, an deren Graph Sie eine Tangente bestimmen möchten. Die Ableitung liefert die Steigung der Tangente im gewählten Punkt und hilft, das lokale Verhalten der Funktion zu analysieren.
-                      </p>
-                    </div>
-                    <img
-                      src="img/geoTangente2.jpg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="image-text-wrapper">
-                    <img
-                      src="img/geoTangente3.jpg"
-                      alt="Beschreibung des Bildes"
-                      onclick="openOverlay(this)"
-                      loading="lazy"
-                    />
-                    <div class="text">
-                      <h2>Funktion 9 | Tangente und ihre Steigung</h2>
-                      <p>
-                        Hier ist die Gleichung der Tangente. Die Tangente gibt die momentane Steigung im gewählten Punkt an und hilft, das lokale Verhalten der Funktion zu analysieren.
-                       
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="controls">
-                <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                <span class="slide-indicator">1 / 3</span>
-                <button onclick="nextSlide(this)">Vor &#8594;</button>
-              </div>
-            </div>
-
-
-    <!-- Funktion 10 Slider -->
-    <div class="slider" data-rule="funktion1">
-      <div class="slides" data-current-index="0">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <div class="image-text-wrapper">
-            <img
-              src="img/geoTrigometrie.jpg"
-              alt="Beschreibung des Bildes"
-              onclick="openOverlay(this)"
-              loading="lazy"
-            />
-            <div class="text">
-              <h2>Funktion 10 | Funktion Trigometrie</h2>
-              <p>
-                Von den vielen trigonometrischen Funktionen sind für uns nur sin, cos und tan wichtig. Möchtest du den Winkel 
-                𝛼 berechnen, nutzt du arcsin, arccos oder arctan als Umkehrfunktionen.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <div class="image-text-wrapper reverse">
-            <div class="text">
-              <h2>Funktion 10 | Winkel in Grad statt im Bogenmaß berechnen</h2>
-              <p>
-               <p style="color: red;">Wichtig:</p>  Wenn du den Winkel in Grad statt im Bogenmaß erhalten möchtest, musst du nach deinem Befehl "d" (degree) hinzufügen. Andernfalls gibt der Taschenrechner das Ergebnis im Bogenmaß (radian) aus, was zu falschen Interpretationen führen kann.
-              </p>
-            </div>
-            <img
-              src="img/geoTrigometrie2.jpg"
-              alt="Beschreibung des Bildes"
-              onclick="openOverlay(this)"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="slide">
-          <div class="image-text-wrapper">
-            <img
-              src="img/geoTrigometrie3.jpg"
-              alt="Beschreibung des Bildes"
-              onclick="openOverlay(this)"
-              loading="lazy"
-            />
-            <div class="text">
-              <h2>Funktion 10 | Hinweis</h2>
-              <p>
-                In GeoGebra wird die fertige Gradzahl, wie im folgenden Beispiel, nicht direkt angezeigt. Für eine bessere Nutzererfahrung empfiehlt es sich daher, den "CAX Rechner" zu verwenden, da dort auch das ausgewertete Ergebnis direkt sichtbar ist.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="operator">
+        <h2>Angabe bzw. Nennung</h2>
+        <p>Für die Angabe bzw. Nennung ist keine Begründung notwendig.</p>
       </div>
-      <div class="controls">
-        <button onclick="prevSlide(this)">&#8592; Zurück</button>
-        <span class="slide-indicator">1 / 3</span>
-        <button onclick="nextSlide(this)">Vor &#8594;</button>
+
+      <div class="operator">
+        <h2>Entscheiden</h2>
+        <p>Für die Entscheidung ist keine Begründung notwendig.</p>
       </div>
+
+      <div class="operator">
+        <h2>Beurteilen</h2>
+        <p>Das zu fällende Urteil ist zu begründen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Beschreiben</h2>
+        <p>Bei einer Beschreibung kommt einer sprachlich angemessenen Formulierung und ggf. einer korrekten Verwendung
+          der Fachsprache besondere Bedeutung zu. Eine Begründung für die Beschreibung ist nicht notwendig.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Erläutern</h2>
+        <p>Die Erläuterung liefert Informationen, mithilfe derer sich z. B. das Zustandekommen einer grafischen
+          Darstellung oder ein mathematisches Vorgehen nachvollziehen lassen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Deuten, Interpretieren</h2>
+        <p>Die Deutung bzw. Interpretation stellt einen Zusammenhang her z. B. zwischen einer grafischen Darstellung,
+          einem Term oder dem Ergebnis einer Rechnung und einem vorgegebenen Sachzusammenhang.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Begründen, Nachweisen, Zeigen</h2>
+        <p>Aussagen oder Sachverhalte sind durch logisches Schließen zu bestätigen. Die Art des Vorgehens kann – sofern
+          nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B. Anwenden rechnerischer oder grafischer
+          Verfahren). Das Vorgehen ist darzustellen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Berechnen</h2>
+        <p>Die Berechnung ist ausgehend von einem Ansatz darzustellen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Bestimmen, Ermitteln</h2>
+        <p>Die Art des Vorgehens kann – sofern nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B.
+          Anwenden rechnerischer oder grafischer Verfahren). Das Vorgehen ist darzustellen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Untersuchen</h2>
+        <p>Die Art des Vorgehens kann – sofern nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B.
+          Anwenden rechnerischer oder grafischer Verfahren). Das Vorgehen ist darzustellen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Grafisch darstellen, Zeichnen</h2>
+        <p>Die grafische Darstellung bzw. Zeichnung ist möglichst genau anzufertigen.</p>
+      </div>
+
+      <div class="operator">
+        <h2>Skizzieren</h2>
+        <p>Die Skizze ist so anzufertigen, dass sie das im betrachteten Zusammenhang Wesentliche grafisch beschreibt.
+        </p>
+      </div>
+
+      <br>
+
+
     </div>
 
 
-    
-                 <!-- Funktion 11 Slider -->
-                 <div class="slider" data-rule="funktion1">
-                  <div class="slides" data-current-index="0">
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoWendestellen.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 11 | Funktion Wendepunkt</h2>
-                          <p>
-                            Mit der Wendepunktfunktion kann überprüft werden, an welcher Stelle sich der Graph wendet – also zum Beispiel von einer Linkskurve in eine Rechtskurve übergeht. An einem Wendepunkt liegt weder eine Links- noch eine Rechtskrümmung vor – der Graph ändert dort seine Krümmungsrichtung.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper reverse">
-                        <div class="text">
-                          <h2>Funktion 11 | Funktion Wendepunkt</h2>
-                          <p>
-                            Um die Wendepunkt-Funktion im Taschenrechner zu nutzen, geben Sie einfach „wendepunkt“ in das Eingabefeld ein und bestätigen Sie die Eingabe.
-                          </p>
-                        </div>
-                        <img
-                          src="img/geoWendestellen2.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoWendestellen3.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 11 | Wendepunkt anzeigen lassen</h2>
-                          <p>
-                            Nachdem Sie Ihre Funktion eingegeben haben, zeigt der Taschenrechner den Wendepunkt bzw. die Wendepunkte als markierten Punkt im Graphen an.
-                           
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="controls">
-                    <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                    <span class="slide-indicator">1 / 3</span>
-                    <button onclick="nextSlide(this)">Vor &#8594;</button>
-                  </div>
-                </div>
-    
-    
-        <!-- Funktion 12 Slider -->
-        <div class="slider" data-rule="funktion1">
-          <div class="slides" data-current-index="0">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <div class="image-text-wrapper">
-                <img
-                  src="img/geoExtrema.jpeg"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-                <div class="text">
-                  <h2>Funktion 12 | Funktion Extremum</h2>
-                  <p>
-                    Mit der Extremum-Funktion können Sie überprüfen, wo im Graphen Hoch- oder Tiefpunkte liegen – also Stellen, an denen der Graph seine Richtung ändert. An einem Extrempunkt ist der Graph weder steigend noch fallend.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="slide">
-              <div class="image-text-wrapper reverse">
-                <div class="text">
-                  <h2>Funktion 12 | Ergebnisanzeige</h2>
-                  <p>
-                    Um die Extremum-Funktion im Taschenrechner zu nutzen, geben Sie extremum in das Eingabefeld ein und bestätigen Sie die Eingabe.
-                  </p>
-                </div>
-                <img
-                  src="img/geoExtrema2.jpeg"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="slide">
-              <div class="image-text-wrapper">
-                <img
-                  src="img/geoExtrema3.jpeg"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-                <div class="text">
-                  <h2>Funktion 12 | Ergebnisanzeige</h2>
-                  <p>
-                    Wenn Sie dann Ihre Funktion in die Extremum-Funktion eingegeben haben, erhalten Sie einen Punkt, der das Extremum darstellt.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="controls">
-            <button onclick="prevSlide(this)">&#8592; Zurück</button>
-            <span class="slide-indicator">1 / 3</span>
-            <button onclick="nextSlide(this)">Vor &#8594;</button>
-          </div>
-        </div>
 
+</body>
 
-
-       
-                 <!-- Funktion 13 Slider -->
-                 <div class="slider" data-rule="funktion1">
-                  <div class="slides" data-current-index="0">
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoMaxMin.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 13 | Min und Max</h2>
-                          <p>
-                            Wenn Sie das Maximum oder Minimum einer Funktion berechnen möchten, geben Sie einfach den Befehl max() oder min() in das Eingabefeld ein.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper reverse">
-                        <div class="text">
-                          <h2>Funktion 13 | Min und Max</h2>
-                          <p>
-                            Schreiben Sie den Namen der Funktion in die Klammern, deren Maximum oder Minimum Sie bestimmen möchten, zusammen mit dem Intervall auf den Sie die Funktion untersuchen möchten.
-                          </p>
-                        </div>
-                        <img
-                          src="img/geoMaxMin2.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                      <div class="image-text-wrapper">
-                        <img
-                          src="img/geoMaxMin3.jpeg"
-                          alt="Beschreibung des Bildes"
-                          onclick="openOverlay(this)"
-                          loading="lazy"
-                        />
-                        <div class="text">
-                          <h2>Funktion 13 | Min und Max</h2>                          <p>
-                            Hier sehen Sie nun den größten bzw. kleinsten Wert der Funktion. Damit können Sie schnell das Verhalten der Funktion untersuchen.                           
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="controls">
-                    <button onclick="prevSlide(this)">&#8592; Zurück</button>
-                    <span class="slide-indicator">1 / 3</span>
-                    <button onclick="nextSlide(this)">Vor &#8594;</button>
-                  </div>
-                </div>
-    
-
-
-                    
-        <!-- Funktion 14 Slider -->
-        <div class="slider" data-rule="funktion1">
-          <div class="slides" data-current-index="0">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <div class="image-text-wrapper">
-                <img
-                  src="img/geo"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-                <div class="text">
-                  <h2>Funktion 14 | INtegral Zeichen</h2>
-                  <p>laf</p>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="slide">
-              <div class="image-text-wrapper reverse">
-                <div class="text">
-                  <h2>Funktion 14 | Tafelbild</h2>
-                  <p>Blabla</p>
-                </div>
-                <img
-                  src="img/geoExtrema2.jpeg"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="slide">
-              <div class="image-text-wrapper">
-                <img
-                  src="img/geoExtrema3.jpeg"
-                  alt="Beschreibung des Bildes"
-                  onclick="openOverlay(this)"
-                  loading="lazy"
-                />
-                <div class="text">
-                  <h2>Funktion 14 | Zusätzlich</h2>
-                  <p>Blabla</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="controls">
-            <button onclick="prevSlide(this)">&#8592; Zurück</button>
-            <span class="slide-indicator">1 / 3</span>
-            <button onclick="nextSlide(this)">Vor &#8594;</button>
-          </div>
-        </div>
-
-
-
-            <!-- Weitere Slider für Funktion 3, 4, etc. im gleichen Stil -->
-          </section>
-        </main>
-
-        <div class="image-text-wrapper reverse">
-          <div class="text">
-            <h2>Typische Fehler</h2>
-            <p>
-              <strong>Falsche Eingaben:</strong> Tippfehler oder falsche Syntax
-              im Eingabefeld. Wie
-              <span style="color: red">ein Komma,</span> anstatt von einem
-              <span style="color: #00ff00">Punkt.</span>
-              <br /><br />
-              <strong>Unbenannte Objekte:</strong> Fehlende Namen für Objekte
-              machen sie schwer identifizierbar. <br /><br />
-              <strong>Falsche Werkzeugwahl:</strong> Unpassende Werkzeuge für
-              die Aufgabe verwenden.
-            </p>
-         
-          </div>
-          <img
-            src="img/smiley.png"
-            alt="Beschreibung des Bildes"
-            loading="lazy"
-            class="smiley"
-          />
-        </div>
-
-        <div class="image-text-wrapper">
-          <h1>Viel Spaß</h1>
-        </div>
-      </section>
-    </main>
-
-    <!-- Overlay -->
-    <div id="overlay" class="overlay">
-      <span class="closebtn" onclick="closeOverlay()">&times;</span>
-      <img id="overlay-image" class="overlay-image" src="" alt="Vollbild" />
-    </div>
-
-    <!-- Secound Overlay for the Operators -->
-    <div id="overlayRules" class="overlayRules" style="display: none; opacity: 0;">
-      <div class="container">
-        <h1>Operatoren-Erklärungen</h1>
-
-        <div class="operator">
-            <h2>Angabe bzw. Nennung</h2>
-            <p>Für die Angabe bzw. Nennung ist keine Begründung notwendig.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Entscheiden</h2>
-            <p>Für die Entscheidung ist keine Begründung notwendig.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Beurteilen</h2>
-            <p>Das zu fällende Urteil ist zu begründen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Beschreiben</h2>
-            <p>Bei einer Beschreibung kommt einer sprachlich angemessenen Formulierung und ggf. einer korrekten Verwendung der Fachsprache besondere Bedeutung zu. Eine Begründung für die Beschreibung ist nicht notwendig.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Erläutern</h2>
-            <p>Die Erläuterung liefert Informationen, mithilfe derer sich z. B. das Zustandekommen einer grafischen Darstellung oder ein mathematisches Vorgehen nachvollziehen lassen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Deuten, Interpretieren</h2>
-            <p>Die Deutung bzw. Interpretation stellt einen Zusammenhang her z. B. zwischen einer grafischen Darstellung, einem Term oder dem Ergebnis einer Rechnung und einem vorgegebenen Sachzusammenhang.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Begründen, Nachweisen, Zeigen</h2>
-            <p>Aussagen oder Sachverhalte sind durch logisches Schließen zu bestätigen. Die Art des Vorgehens kann – sofern nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B. Anwenden rechnerischer oder grafischer Verfahren). Das Vorgehen ist darzustellen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Berechnen</h2>
-            <p>Die Berechnung ist ausgehend von einem Ansatz darzustellen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Bestimmen, Ermitteln</h2>
-            <p>Die Art des Vorgehens kann – sofern nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B. Anwenden rechnerischer oder grafischer Verfahren). Das Vorgehen ist darzustellen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Untersuchen</h2>
-            <p>Die Art des Vorgehens kann – sofern nicht durch einen Zusatz anders angegeben – frei gewählt werden (z. B. Anwenden rechnerischer oder grafischer Verfahren). Das Vorgehen ist darzustellen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Grafisch darstellen, Zeichnen</h2>
-            <p>Die grafische Darstellung bzw. Zeichnung ist möglichst genau anzufertigen.</p>
-        </div>
-
-        <div class="operator">
-            <h2>Skizzieren</h2>
-            <p>Die Skizze ist so anzufertigen, dass sie das im betrachteten Zusammenhang Wesentliche grafisch beschreibt.</p>
-        </div>
-
-        <br>
- 
-       
-      </div>
-
-
-
-  </body>
 </html>
