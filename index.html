@@ -25,7 +25,40 @@
   <body>
     <header>
       <h1>Taschenrechner Funktionen</h1>
-      <div>
+      <div class="header-right">
+        <!-- Dark/Light Mode Toggle -->
+        <button id="themeToggle" class="theme-toggle" title="Dark/Light Mode wechseln" aria-label="Theme wechseln">
+          <span class="theme-icon">🌙</span>
+        </button>
+        
+        <!-- Bookmark Button -->
+        <button id="bookmarkBtn" class="header-icon-btn" title="Lesezeichen" aria-label="Lesezeichen öffnen">
+          🔖
+        </button>
+        
+        <!-- Inhaltsverzeichnis Button -->
+        <button id="tocBtn" class="header-icon-btn" title="Inhaltsverzeichnis" aria-label="Inhaltsverzeichnis öffnen">
+          📋
+        </button>
+        
+        <!-- Quiz Button -->
+        <button id="quizBtn" class="header-icon-btn" title="Quiz starten" aria-label="Quiz starten">
+          ❓
+        </button>
+        
+        <!-- Print Button -->
+        <button id="printBtn" class="header-icon-btn" title="Als PDF drucken" aria-label="Seite drucken">
+          🖨️
+        </button>
+        
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <input type="text" id="searchInput" placeholder="Suche..." onkeyup="searchFunctions()" autocomplete="off" />
+            <span class="search-icon" onclick="searchFunctions()">&#128269;</span>
+            <div id="searchSuggestions" class="search-suggestions" style="display: none;"></div>
+          </div>
+          <div id="searchResults" class="search-results" style="display: none;"></div>
+        </div>
         <img
           src="img/taunt.png"
           alt="taunt"
@@ -35,11 +68,16 @@
       </div>
     </header>
 
+    <!-- Zurück-nach-oben Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Nach oben scrollen" aria-label="Nach oben scrollen">
+      ↑
+    </button>
+
     <main>
       <section class="content">
         <section class="content">
           <!-- Funktion 1 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider1">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -62,6 +100,7 @@
                       neben der Funktion nicht aktiviert wurde. Klicken Sie auf
                       diesen Kreis, um die Funktion im Graphen sichtbar zu
                       machen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(1)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -77,6 +116,7 @@
                       anschließend 'Einstellungen' aus. Dort können Sie die
                       Farbe und weitere Darstellungsoptionen, wie Linienstil
                       oder Dicke, individuell anpassen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(1)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -104,6 +144,7 @@
                       um das
                       <span class="rainbow-text">gewünschte Aussehen </span>
                       zu erzielen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(1)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -117,7 +158,7 @@
           </div>
 
           <!-- Funktion 2 Slider -->
-          <div class="slider" data-rule="funktion2">
+          <div class="slider" data-rule="funktion2" id="slider2">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -136,6 +177,7 @@
                       klickst. Möchtest du den Regler bearbeiten, gehe in die
                       Einstellungen und klicke explizit auf "Schieberegler", um
                       die Anpassungen vorzunehmen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(2)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -151,6 +193,7 @@
                       klickst. Möchtest du den Regler bearbeiten, gehe in die
                       Einstellungen und klicke explizit auf "Schieberegler", um
                       die Anpassungen vorzunehmen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(2)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -177,6 +220,7 @@
                       die Schrittweite, den minimalen und maximalen Wert sowie
                       die Geschwindigkeit des Reglers anpassen. So kannst du den
                       Regler ganz nach deinen Bedürfnissen gestalten.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(2)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -190,7 +234,7 @@
           </div>
 
           <!-- Funktion 3 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider3">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -207,6 +251,7 @@
                       Wenn du die Nullstellen eines Polynoms anzeigen möchtest,
                       gib einfach "Nullstelle(Polynom)" in das Eingabefeld ein
                       und öffne die Funktion zur Berechnung.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(3)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -220,6 +265,7 @@
                       Nun gib den Namen deiner Funktion (in diesem Fall f) in
                       die Klammern der Funktion "Nullstelle" ein, um die
                       Nullstellen deines Graphen anzuzeigen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(3)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -245,6 +291,7 @@
                       Das Ergebnis zeigt dann eine Auflistung der Nullstellen,
                       die der Funktion zugeordnet sind. Diese erscheinen als
                       Werte auf der x-Achse, wo der Graph die Null schneidet.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(3)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -258,7 +305,7 @@
           </div>
 
           <!-- Funktion 4 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider4">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -275,6 +322,7 @@
                       In GeoGebra kannst du die Schnittpunkte von Funktionen
                       einfach berechnen. Gib dazu Schnittpunkt(Object1, Object2)
                       in die Eingabezeile ein.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(4)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -287,6 +335,7 @@
                     <p>
                       Gib in GeoGebra Schnittpunkt(f, g) ein, um den
                       Schnittpunkt der Funktionen f und g zu finden.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(4)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -312,6 +361,7 @@
                       Nachdem du Schnittpunkt(f, g) eingegeben hast, drücke
                       Enter. Alle Schnittpunkte der Funktionen f und g werden
                       dann angezeigt
+                      <button class="bookmark-slider-btn" onclick="addBookmark(4)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -325,7 +375,7 @@
           </div>
 
           <!-- Funktion 5 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider5">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -344,6 +394,7 @@
                       Lösen(Gleichung) in die Eingabezeile ein, um alle Lösungen
                       bequem angezeigt zu bekommen. So löst du auch
                       anspruchsvolle Aufgaben mühelos!
+                      <button class="bookmark-slider-btn" onclick="addBookmark(5)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -357,6 +408,7 @@
                       Hast du deine Lösung erhalten, kannst du diese gerundet
                       als Dezimalzahl darstellen lassen, indem du auf den lila
                       Button neben der Lösung klickst.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(5)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -381,6 +433,7 @@
                     <p>
                       Natürlich kannst du zur ursprünglichen Darstellung
                       zurückkehren, indem du erneut auf den Button klickst.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(5)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -396,6 +449,7 @@
                       werden soll, kann man stattdessen den Taschenrechner
                       verwenden, um sie schnell zu bearbeiten. Wichtig das man
                       x, z oder y als Variabel verwendet.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(5)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -415,7 +469,7 @@
           </div>
 
           <!-- Funktion 6 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider6">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -437,6 +491,7 @@
                       Eingabefeld verwenden. Diese Funktion wird den Term für
                       Sie zusammenfassen und ihn in eine einfachere, kompaktere
                       Form bringen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(6)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -449,6 +504,7 @@
                     <p>
                       Geben Sie den Namen der Funktion, die Sie vereinfacht
                       haben möchten, in das Eingabefeld ein.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(6)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -475,6 +531,7 @@
                       ursprünglichen Ausdruck in eine kompaktere und leichter
                       verständliche Form umwandelt. Dies macht die weitere
                       Bearbeitung und Analyse des Graphen wesentlich einfacher.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(6)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -488,7 +545,7 @@
           </div>
 
           <!-- Funktion 7 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider7">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -507,6 +564,7 @@
                       Dies ist besonders nützlich, wenn Sie den Satz vom
                       Nullprodukt anwenden möchten, um die Nullstellen der
                       Funktion zu ermitteln.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(7)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -519,6 +577,7 @@
                     <p>
                       Geben Sie den Namen der Funktion ein, die Sie
                       faktorisieren möchten.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(7)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -543,6 +602,7 @@
                     <p>
                       Hier ist nun die faktorisierte Form Ihrer Funktion. Damit
                       können Sie die Nullstellen direkt ablesen
+                      <button class="bookmark-slider-btn" onclick="addBookmark(7)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -556,7 +616,7 @@
           </div>
 
           <!-- Funktion 8 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider8">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -576,6 +636,7 @@
                       Möglichkeit, Steigungen in jedem Punkt des Graphen zu
                       bestimmen oder Extrempunkte sowie Wendepunkte zu
                       analysieren.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(8)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -588,6 +649,7 @@
                     <p>
                       Geben Sie den Namen der Funktion, die Sie ableiten
                       möchten, in das Eingabefeld ein.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(8)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -617,6 +679,7 @@
                         >Funktion werden in der Klausur mit fs(x) als Ableitung
                         einer Funktion markiert.</strong
                       >
+                      <button class="bookmark-slider-btn" onclick="addBookmark(8)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -674,6 +737,7 @@
                         >
                       </p>
                     </div>
+                    <button class="bookmark-slider-btn" onclick="addBookmark(8)" title="Lesezeichen setzen">🔖</button>
                   </div>
                 </div>
               </div>
@@ -686,7 +750,7 @@
           </div>
 
           <!-- Funktion 9 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider9">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -704,6 +768,7 @@
                       Graphen in einem Punkt bestimmen. Sie gibt die momentane
                       Steigung an und hilft, lokale Veränderungen und das
                       Verhalten der Funktion zu analysieren.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(9)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -719,6 +784,7 @@
                       Ableitung liefert die Steigung der Tangente im gewählten
                       Punkt und hilft, das lokale Verhalten der Funktion zu
                       analysieren.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(9)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -744,6 +810,7 @@
                       Hier ist die Gleichung der Tangente. Die Tangente gibt die
                       momentane Steigung im gewählten Punkt an und hilft, das
                       lokale Verhalten der Funktion zu analysieren.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(9)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -757,7 +824,7 @@
           </div>
 
           <!-- Funktion 10 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider10">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -775,6 +842,7 @@
                       nur sin, cos und tan wichtig. Möchtest du den Winkel 𝛼
                       berechnen, nutzt du arcsin, arccos oder arctan als
                       Umkehrfunktionen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(10)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -792,6 +860,7 @@
                       du nach deinem Befehl "d" (degree) hinzufügen. Andernfalls
                       gibt der Taschenrechner das Ergebnis im Bogenmaß (radian)
                       aus, was zu falschen Interpretationen führen kann.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(10)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -819,6 +888,7 @@
                       Nutzererfahrung empfiehlt es sich daher, den "CAX Rechner"
                       zu verwenden, da dort auch das ausgewertete Ergebnis
                       direkt sichtbar ist.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(10)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -832,7 +902,7 @@
           </div>
 
           <!-- Funktion 11 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider11">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -852,6 +922,7 @@
                       einem Wendepunkt liegt weder eine Links- noch eine
                       Rechtskrümmung vor – der Graph ändert dort seine
                       Krümmungsrichtung.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(11)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -863,8 +934,9 @@
                     <h2>Funktion 11 | Funktion Wendepunkt</h2>
                     <p>
                       Um die Wendepunkt-Funktion im Taschenrechner zu nutzen,
-                      geben Sie einfach „wendepunkt“ in das Eingabefeld ein und
+                      geben Sie einfach „wendepunkt" in das Eingabefeld ein und
                       bestätigen Sie die Eingabe.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(11)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -890,6 +962,7 @@
                       Nachdem Sie Ihre Funktion eingegeben haben, zeigt der
                       Taschenrechner den Wendepunkt bzw. die Wendepunkte als
                       markierten Punkt im Graphen an.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(11)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -903,7 +976,7 @@
           </div>
 
           <!-- Funktion 12 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider12">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -921,6 +994,7 @@
                       Graphen Hoch- oder Tiefpunkte liegen – also Stellen, an
                       denen der Graph seine Richtung ändert. An einem
                       Extrempunkt ist der Graph weder steigend noch fallend.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(12)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -934,6 +1008,7 @@
                       Um die Extremum-Funktion im Taschenrechner zu nutzen,
                       geben Sie extremum in das Eingabefeld ein und bestätigen
                       Sie die Eingabe.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(12)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -959,6 +1034,7 @@
                       Wenn Sie dann Ihre Funktion in die Extremum-Funktion
                       eingegeben haben, erhalten Sie einen Punkt, der das
                       Extremum darstellt.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(12)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -972,7 +1048,7 @@
           </div>
 
           <!-- Funktion 13 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider13">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -989,6 +1065,7 @@
                       Wenn Sie das Maximum oder Minimum einer Funktion berechnen
                       möchten, geben Sie einfach den Befehl max() oder min() in
                       das Eingabefeld ein.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(13)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1003,6 +1080,7 @@
                       deren Maximum oder Minimum Sie bestimmen möchten, zusammen
                       mit dem Intervall auf den Sie die Funktion untersuchen
                       möchten.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(13)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -1028,6 +1106,7 @@
                       Hier sehen Sie nun den größten bzw. kleinsten Wert der
                       Funktion. Damit können Sie schnell das Verhalten der
                       Funktion untersuchen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(13)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1041,7 +1120,7 @@
           </div>
 
           <!-- Funktion 14 Slider -->
-          <div class="slider" data-rule="funktion1">
+          <div class="slider" data-rule="funktion1" id="slider14">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -1059,6 +1138,7 @@
                       berechnen möchten, geben Sie einfach den Befehl Summe() in
                       das Eingabefeld ein. Dies ist besonders nützlich für
                       arithmetische Reihen oder komplexere Summenberechnungen.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(14)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1072,6 +1152,7 @@
                       Geben Sie die Summe mit den gewünschten Parametern ein:
                       Summe(Ausdruck, Variable, Startindex, Endindex). Beispiel:
                       Summe(i, i, 1, 10) berechnet die Summe von 1 bis 10.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(14)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -1091,7 +1172,7 @@
           </div>
 
           <!-- Funktion 15 Slider -->
-          <div class="slider" data-rule="funktion14">
+          <div class="slider" data-rule="funktion14" id="slider15">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -1116,6 +1197,7 @@
                       Beim Rechnen mit Integralen ist das besonders wichtig, da
                       Flächen unterhalb der x-Achse sonst negativ gezählt werden
                       würden.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(15)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1137,6 +1219,7 @@
                       Dadurch wird sichergestellt, dass alle Flächen positiv
                       gezählt werden – egal, ob der Graph oberhalb oder
                       unterhalb der x-Achse liegt.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(15)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -1175,6 +1258,7 @@
                       </span>
                       Verwende abs immer dann, wenn du den gesamten
                       Flächeninhalt suchst!
+                      <button class="bookmark-slider-btn" onclick="addBookmark(15)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1189,7 +1273,7 @@
           </div>
 
           <!-- Funktion 16 Slider -->
-          <div class="slider" data-rule="funktion16">
+          <div class="slider" data-rule="funktion16" id="slider16">
             <div class="slides" data-current-index="0">
               <!-- Slide 1 -->
               <div class="slide">
@@ -1213,6 +1297,7 @@
                       <br /><br />
                       Das ist besonders hilfreich, wenn du den Abstand oder die
                       Fläche zwischen zwei Kurven bestimmen möchtest.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(16)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1238,6 +1323,7 @@
                       <br /><br />
                       Der Rechner berechnet automatisch die Fläche zwischen den
                       beiden Graphen im angegebenen Bereich.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(16)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                   <img
@@ -1271,6 +1357,7 @@
                       <br /><br />
                       So vermeidest du Fehler und erhältst den richtigen
                       Flächeninhalt.
+                      <button class="bookmark-slider-btn" onclick="addBookmark(16)" title="Lesezeichen setzen">🔖</button>
                     </p>
                   </div>
                 </div>
@@ -1320,6 +1407,52 @@
     <div id="overlay" class="overlay">
       <span class="closebtn" onclick="closeOverlay()">&times;</span>
       <img id="overlay-image" class="overlay-image" alt="Vollbild" />
+    </div>
+    
+    <!-- Bookmarks Overlay -->
+    <div id="bookmarksOverlay" class="overlay" onclick="closeBookmarks(event)">
+      <span class="closebtn" onclick="closeBookmarks()">&times;</span>
+      <div class="bookmarks-container">
+        <h2>📌 Meine Lesezeichen</h2>
+        <div id="bookmarksList" class="bookmarks-list">
+          <p class="no-bookmarks">Noch keine Lesezeichen gesetzt.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Table of Contents Overlay -->
+    <div id="tocOverlay" class="overlay" onclick="closeTOC(event)">
+      <span class="closebtn" onclick="closeTOC()">&times;</span>
+      <div class="toc-container">
+        <h2>📋 Inhaltsverzeichnis</h2>
+        <nav id="tocList" class="toc-list"></nav>
+      </div>
+    </div>
+    
+    <!-- Quiz Overlay -->
+    <div id="quizOverlay" class="overlay" onclick="closeQuiz(event)">
+      <span class="closebtn" onclick="closeQuiz()">&times;</span>
+      <div class="quiz-container">
+        <h2>❓ Wissenstest</h2>
+        <div id="quizContent" class="quiz-content">
+          <div id="quizStart">
+            <p>Teste dein Wissen über die gelernten Funktionen!</p>
+            <p id="quizProgress">Bereits beantwortete Fragen: <span id="quizScore">0</span></p>
+            <button onclick="startQuiz()" class="quiz-start-btn">Quiz starten</button>
+          </div>
+          <div id="quizQuestion" style="display: none;">
+            <h3 id="questionText"></h3>
+            <div id="answersContainer" class="answers-container"></div>
+            <div id="quizFeedback" class="quiz-feedback" style="display: none;"></div>
+            <button id="nextQuestionBtn" onclick="nextQuestion()" style="display: none;" class="quiz-next-btn">Nächste Frage</button>
+          </div>
+          <div id="quizEnd" style="display: none;">
+            <h3>Quiz beendet!</h3>
+            <p id="finalScore"></p>
+            <button onclick="restartQuiz()" class="quiz-start-btn">Nochmal spielen</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Secound Overlay for the Operators -->
