@@ -829,6 +829,10 @@ button:hover {
     margin: 1rem;
     padding: 1rem;
   }
+
+  #overlayRules .container h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 412px) {
@@ -837,6 +841,10 @@ button:hover {
   }
 
   header h1 {
+    font-size: 1.2rem;
+  }
+
+  #overlayRules .container h1 {
     font-size: 1.2rem;
   }
 
