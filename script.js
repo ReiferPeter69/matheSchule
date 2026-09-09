@@ -243,7 +243,9 @@ function renderBookmarks() {
     13: "Min und Max",
     14: "Summenzeichen",
     15: "Abs-Funktion",
-    16: "IntegralZwischen"
+    16: "IntegralZwischen",
+    17: "Vektoren",
+    18: "Durchschnitt berechnen"
   };
   
   let html = "";
@@ -352,7 +354,9 @@ function initTOC() {
     13: "Min und Max",
     14: "Summenzeichen",
     15: "Abs-Funktion",
-    16: "IntegralZwischen"
+    16: "IntegralZwischen",
+    17: "Vektoren",
+    18: "Durchschnitt berechnen"
   };
   
   let html = "";
@@ -546,6 +550,26 @@ const quizQuestions = [
       "Es integriert f",
       "Es zerlegt f in Linearfaktoren",
       "Es zeichnet f"
+    ],
+    correct: 2
+  },
+  {
+    question: "Wie müssen Werte in einer Liste für den Durchschnitt getrennt werden?",
+    answers: [
+      "Mit Punkt",
+      "Mit Komma",
+      "Mit Semikolon",
+      "Mit Leerzeichen"
+    ],
+    correct: 1
+  },
+  {
+    question: "Wie berechnest du den Durchschnitt aus Ereignissen l1 und Häufigkeiten l2?",
+    answers: [
+      "Nur Mittelwert(l1, l2)",
+      "Nur Mittel(l1, l2)",
+      "Mittel(l1, l2) und Mittelwert(l1, l2) – beides geht",
+      "Summe(l1, l2)"
     ],
     correct: 2
   }
@@ -784,7 +808,13 @@ function showSuggestions(query) {
     "Fläche",
     "abs",
     "Betrag",
-    "IntegralZwischen"
+    "IntegralZwischen",
+    "Vektoren",
+    "Durchschnitt",
+    "Mittelwert",
+    "Mittel",
+    "Häufigkeiten",
+    "Liste"
   ];
   
   const filtered = allSuggestions.filter(s => 

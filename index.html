@@ -1209,6 +1209,105 @@
           </div>
         </div>
 
+        <!-- Funktion 18 Slider -->
+        <div class="slider" data-rule="funktion18" id="slider18">
+          <div class="slides" data-current-index="0">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="image-text-wrapper">
+                <img src="img/geoMittel.jpeg" alt="Listen für Durchschnitt eingeben" onclick="openOverlay(this)"
+                  loading="lazy" />
+                <div class="text">
+                  <h2>Funktion 18 | Listen für den Durchschnitt erstellen</h2>
+                  <p>
+                    Erstelle zuerst zwei Listen in geschweiften Klammern
+                    <code>{...}</code>: <br /><br />
+                    <strong>l1</strong> = Menge der Ereignisse, z. B.
+                    <code>l1 = {15, 16, 17, 18, 19, 20, 65, 67}</code>
+                    <br />
+                    <strong>l2</strong> = absolute Häufigkeiten, z. B.
+                    <code>l2 = {4, 12, 7, 17, 2, 1, 3, 5}</code>
+                    <br /><br />
+                    <span style="color: red; font-weight: 600">Wichtig:</span>
+                    Trenne die Werte immer mit einem
+                    <strong>Komma</strong>, sonst erkennt GeoGebra die Syntax
+                    nicht.
+                    <button class="bookmark-slider-btn" onclick="addBookmark(18)" title="Lesezeichen setzen">🔖</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="image-text-wrapper reverse">
+                <div class="text">
+                  <h2>Funktion 18 | Mittel-Befehl eingeben</h2>
+                  <p>
+                    Gib in die Eingabezeile <code>Mittel(</code> oder
+                    <code>Mittelwert(</code> ein – beides geht. GeoGebra
+                    schlägt dir dann automatisch vor:
+                    <br /><br />
+                    <strong>Mittel(Liste von Zahlen, Liste von Häufigkeiten)</strong>
+                    bzw.
+                    <strong>Mittelwert(Liste von Zahlen, Liste von Häufigkeiten)</strong>
+                    <br /><br />
+                    Die erste Liste sind deine Ereignisse (l1), die zweite Liste
+                    sind die dazugehörigen absoluten Häufigkeiten (l2).
+                    <button class="bookmark-slider-btn" onclick="addBookmark(18)" title="Lesezeichen setzen">🔖</button>
+                  </p>
+                </div>
+                <img src="img/geoMittel2.jpg" alt="Mittel Befehl Syntax" onclick="openOverlay(this)"
+                  loading="lazy" />
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="image-text-wrapper">
+                <img src="img/geoMittel3.jpg" alt="Mittel / Mittelwert auswählen" onclick="openOverlay(this)"
+                  loading="lazy" />
+                <div class="text">
+                  <h2>Funktion 18 | Mittel / Mittelwert auswählen</h2>
+                  <p>
+                    Du kannst <strong>Mittel</strong> oder
+                    <strong>Mittelwert</strong> nehmen – beides berechnet den
+                    normalen Durchschnitt. Achte nur darauf, nicht aus Versehen
+                    MittelwertX, MittelwertY, geometrischer oder harmonischer
+                    Mittelwert zu nehmen.
+                    <button class="bookmark-slider-btn" onclick="addBookmark(18)" title="Lesezeichen setzen">🔖</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div class="image-text-wrapper reverse">
+                <div class="text">
+                  <h2>Funktion 18 | Durchschnitt berechnen</h2>
+                  <p>
+                    Gib jetzt <code>Mittel(l1, l2)</code> oder
+                    <code>Mittelwert(l1, l2)</code> ein und bestätige mit
+                    Enter. Beide Befehle berechnen dir den gewichteten Durchschnitt,
+                    hier z. B.:
+                    <br /><br />
+                    <strong>≈ 24.80</strong>
+                    <br /><br />
+                    Über den lila Button neben dem Ergebnis kannst du dir den
+                    Wert wie gewohnt gerundet als Dezimalzahl anzeigen lassen.
+                    <button class="bookmark-slider-btn" onclick="addBookmark(18)" title="Lesezeichen setzen">🔖</button>
+                  </p>
+                </div>
+                <img src="img/geoMittel4.jpg" alt="Mittel Ergebnis" onclick="openOverlay(this)"
+                  loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button onclick="prevSlide(this)">&#8592; Zurück</button>
+            <span class="slide-indicator">1 / 4</span>
+            <button onclick="nextSlide(this)">Vor &#8594;</button>
+          </div>
+        </div>
+
         <!-- Weitere Slider für Funktionen -->
       </section>
 

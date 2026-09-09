@@ -456,16 +456,22 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 70px;
+  height: auto;
+  overflow: hidden;
 }
 
 header h1 {
   font-family: "Playwrite CU", cursive;
-  font-size: 2rem;
+  font-size: clamp(0.9rem, 3.5vw, 2rem);
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: -0.5px;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
 }
 
 header img {
@@ -810,10 +816,6 @@ button:hover {
     border-radius: 0;
   }
 
-  header h1 {
-    font-size: 1.5rem;
-  }
-
   .image-text-wrapper {
     flex-direction: column;
     margin: 0.5rem;
@@ -838,10 +840,6 @@ button:hover {
 @media (max-width: 412px) {
   header {
     padding: 0.5rem;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
   }
 
   #overlayRules .container h1 {
