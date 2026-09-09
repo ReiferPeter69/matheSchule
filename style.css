@@ -458,7 +458,7 @@ header {
   width: 100%;
   min-height: 70px;
   height: auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 header h1 {
@@ -558,6 +558,7 @@ header img:hover {
   max-height: 400px;
   overflow-y: auto;
   min-width: 320px;
+  max-width: calc(100vw - 2rem);
   z-index: 2000;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
